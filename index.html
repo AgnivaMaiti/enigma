@@ -1,0 +1,56 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Confession</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif; 
+            background-color: #ffcccc; 
+        }
+        
+        #container {
+            text-align: center;
+        }
+        
+        #confessionText {
+            font-size: 24px;
+        }
+        
+        #clickButton {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #ff99cc; 
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        #clickButton:hover {
+            background-color: #ff66b2;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="confessionText">Here's a confession</div>
+        <button id="clickButton">Click here</button>
+    </div>
+    
+    <script>
+        const confessionText = document.getElementById('confessionText');
+        const clickButton = document.getElementById('clickButton');
+        
+        clickButton.addEventListener('click', () => {
+            confessionText.textContent = "I like you!";
+            clickButton.style.display = 'none'; 
+        });
+    </script>
+</body>
+</html>
